@@ -26,6 +26,15 @@ A template for starting the final Play2Learn project with Django and Vue.
 3. The Vue games will be working at:
     1. Anagram Hunt - [http://127.0.0.1:8000/anagram-hunt/](http://127.0.0.1:8000/anagram-hunt).
     2. Math Facts - [http://127.0.0.1:8000/math-facts/](http://127.0.0.1:8000/math-facts).
+  
+## Important things to know
+We connected Django and Vue so you don't have to worry about that configuration stuff and can get started right
+away building out your Django backend, however a quirk of the way we have configured Vue and Django is that the
+`vue-games/public/index.html` file is a Django template. In fact, this file generates the `templates/_base_vue.html`.
+So, if you want to update the `_base_vue.html` file (e.g., add a header, footer, etc.), you actually need to update that
+`index.html` file instead. If you have the Vue dev server running, the `_base_vue.html` file will be updated right away.
+
+For all other Django template, you can create and edit them exactly as you learned in the Django course. No differences there!
 
 ## More
-If you want to learn more about how we integrated Vue and Django in this template, see [Connecting Django and Vue](https://www.webucator.com/article/connecting-django-and-vue/). 
+If you want to learn more about how we integrated Vue and Django in this template, see [Connecting Django and Vue](https://www.webucator.com/article/connecting-django-and-vue/). This article goes through a similar process to what we did for this template and includes tips for communicating between the Django backend and Vue frontend. Note that is not exactly the same as this template.

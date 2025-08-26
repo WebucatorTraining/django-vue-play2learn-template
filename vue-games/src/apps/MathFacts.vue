@@ -136,6 +136,7 @@ export default {
   },
   methods: {
     play() {
+      this.score = 0;
       this.screen = "play";
       this.getNewQuestion();
       this.interval = setInterval(() => {
